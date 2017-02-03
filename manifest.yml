@@ -1,0 +1,9 @@
+---
+applications:
+- name: registry-consumer
+  memory: 1G
+  instances: 1
+  host: test-eureka-registry
+  path: target/registry-consumer-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry

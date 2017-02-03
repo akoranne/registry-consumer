@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: registry-consumer
+  cloud:
+    services:
+      registrationMethod: route
+security:
+  basic:
+    enabled: false
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://127.0.0.1:8761}/eureka
