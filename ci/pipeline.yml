@@ -1,7 +1,7 @@
 # pipeline for kill-java
 
 groups:
-- name: custom-eureka-registry
+- name: registry-consumer
   jobs:
   - service-unit
 
@@ -9,7 +9,7 @@ resources:
 - name: service-repo
   type: git
   source:
-    uri: https://github.com/akoranne/custom-eureka-registry.git
+    uri: https://github.com/akoranne/registry-consumer.git
     branch: master
 - name: deploy-dev-env
   type: cf

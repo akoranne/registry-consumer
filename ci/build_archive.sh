@@ -8,7 +8,6 @@ echo " .. Running build"
 cd service-repo
 
 # maven build
-export GRADLE_OPTS="-Dorg.gradle.native=false"
 ./mvnw clean package
 
 # create target folder
