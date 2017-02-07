@@ -6,4 +6,4 @@ applications:
   host: registry-consumer
   path: target/registry-consumer-0.1.0-SNAPSHOT.jar
   services:
-  - service-registry
+  - eureka-service
