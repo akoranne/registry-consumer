@@ -1,0 +1,19 @@
+server:
+  port: ${vcap.application.port:9098}
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+---
+spring:
+  profiles: cloud
+security:
+  basic:
+    enabled: false
+eureka:
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80

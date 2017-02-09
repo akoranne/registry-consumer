@@ -7,3 +7,6 @@ applications:
   path: target/registry-consumer-0.1.0-SNAPSHOT.jar
   services:
   - eureka-service
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: registry-consumer.apps.laba.ecsteam.io
