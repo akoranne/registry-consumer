@@ -3,10 +3,8 @@ applications:
 - name: registry-consumer
   memory: 1G
   instances: 1
-  host: registry-consumer
   path: target/registry-consumer-0.1.0-SNAPSHOT.jar
   services:
-  - eureka-service
+  - registry-service
   env:
     SPRING_PROFILES_ACTIVE: cloud
-    APPLICATION_DOMAIN: registry-consumer.apps.laba.ecsteam.io
